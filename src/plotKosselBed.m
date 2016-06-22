@@ -1,4 +1,4 @@
-function k = plotKosselBed (diameter,hexagonplate,plotnozzle,zprobes)
+function k = plotKosselBed (diameter,hexagonplate,plotnozzle,probeoffset,zprobes)
     hold off
     
     roundPlatePlot(0,0,diameter/2);
@@ -15,7 +15,7 @@ function k = plotKosselBed (diameter,hexagonplate,plotnozzle,zprobes)
       axis square;
     endif
     
-    plotCalibration(plotnozzle,zprobes);
+    plotCalibration(plotnozzle,probeoffset,zprobes);
     
     hold off
 endfunction
