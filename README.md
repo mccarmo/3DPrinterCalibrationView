@@ -35,13 +35,13 @@ Just copy the functions to a folder and execute (using Octave) the following com
 
 Where:
 
-d - diameter of your Delta Printer print area.
-h - If your bed is a hexagon. If True, a hexagon shaped bed will be plotted. False will plot just the circle area.
-np - Print the nozzle position relative to the AutoLevel Sensor
-po - the probe offset for x,y relative to the nozzle
-zp - The 7x7 matrix with the Z-Probe data.
+1. d - diameter of your Delta Printer print area.
+2. h - If your bed is a hexagon. If True, a hexagon shaped bed will be plotted. False will plot just the circle area.
+3. np - Print the nozzle position relative to the AutoLevel Sensor
+4. po - the probe offset for x,y relative to the nozzle
+5. zp - The 7x7 matrix with the Z-Probe data.
 
-#Next updates
 
-The sensor position must be dynamic.
+
+
 
