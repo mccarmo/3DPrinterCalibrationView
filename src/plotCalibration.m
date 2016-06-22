@@ -10,10 +10,12 @@ function c = plotCalibration(plotnozzle,probeoffset,zprobes)
     endif
     x = -3*dir
     while(x ~= 4*dir)
-      if (x*x + y*y < 11)         
-         scatter3(AUTOLEVEL_GRID * x,AUTOLEVEL_GRID * y,zprobes(x+4,y+4),'red','filled')                  
+      if (x*x + y*y < 11)                          
+         scatter3(AUTOLEVEL_GRID * x,AUTOLEVEL_GRID * y,zprobes(x+4,y+4),'red','filled')                           
+         title ({'Z-Probes', ...
+         'Red - AutoLevel Sensor, Blue - Nozzle, if enabled'});         
          if(plotnozzle)
-             scatter3((AUTOLEVEL_GRID * x)+probeoffset(1),(AUTOLEVEL_GRID * y)+probeoffset(2),0,'blue','filled')                   
+             scatter3((AUTOLEVEL_GRID * x)+probeoffset(1),(AUTOLEVEL_GRID * y)+probeoffset(2),0,'blue','.')                   
          endif
       endif        
       x += dir;
@@ -21,7 +23,7 @@ function c = plotCalibration(plotnozzle,probeoffset,zprobes)
   endfor
   
   #This is just to help with the scale  
-  scatter3(0,0,10,'green','filled'); 
-  scatter3(0,0,10,'green','filled'); 
+  scatter3(0,0,10,'green','filled');
+  scatter3(0,0,-10,'green','filled');
   
 endfunction

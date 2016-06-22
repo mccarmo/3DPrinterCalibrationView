@@ -1,6 +1,9 @@
 function k = plotKosselBed (diameter,hexagonplate,plotnozzle,probeoffset,zprobes)
     hold off
     
+    set(gca (), "xdir", "reverse") 
+    set(gca (), "ydir", "reverse")
+    
     roundPlatePlot(0,0,diameter/2);
     
     if(hexagonplate)
